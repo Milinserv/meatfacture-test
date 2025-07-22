@@ -5,6 +5,7 @@
 - Laravel v10
 - Laravel Data
 - Jwt
+- PostgreSQL
 
 ## Настройка БД
 
