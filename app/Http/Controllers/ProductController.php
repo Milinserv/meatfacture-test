@@ -10,6 +10,7 @@ class ProductController extends Controller
 {
     /**
      * Получить все продукты
+     * @return JsonResponse
      */
     public function index(): JsonResponse
     {
