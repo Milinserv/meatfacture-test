@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Exception;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -10,9 +11,9 @@ use Tymon\JWTAuth\Facades\JWTAuth;
 class JwtMiddleware
 {
     /**
-     * Handle an incoming request.
+     * Проверка наличие и валидность JWT-токена в каждом входящем запросе
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  Closure(Request): (Response)  $next
      */
     public function handle(Request $request, Closure $next)
     {
