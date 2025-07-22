@@ -11,5 +11,5 @@ Route::post('/login', [UserController::class, 'login']);
 Route::middleware(['jwt.verify'])->group(function () {
     Route::get('/products', [ProductController::class, 'index']);
     Route::post('/orders', [OrderController::class, 'store']);
-    Route::get('/orders', [OrderController::class, 'index']);
+    Route::get('/orders/{user_id}', [OrderController::class, 'index']);
 });
